@@ -1,0 +1,20 @@
+<template name="home">
+  {{#if Template.subscriptionsReady}}
+  <div class="row">
+  <div class="col s12 m7">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{wac.url}}" alt="{{wac.name}}">
+        <span class="card-title" id="name">{{wac.name}}</span>
+      </div>
+      <div class="card-content">
+        <i class="medium material-icons" id="like" style="padding-left:30px;">thumb_up</i>
+        <i class="medium material-icons" id="pas_like" style="float:right;padding-right:30px;">thumb_down</i>
+      </div>
+    </div>
+  </div>
+</div>
+  {{else}}
+      {{>spinner}}
+  {{/if}}
+</template>
